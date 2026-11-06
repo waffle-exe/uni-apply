@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#000000">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>Germany MSc Application Tracker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Germany MSc Tracker <small>CSE &amp; Astrophysics · Winter 2027/28</small></h1>
+  <div class="progress"><span id="count">0</span> ticked <button id="reset">Reset</button></div>
+</header>
+<nav class="tabs">
+  <button class="tab active" data-tab="concise">Concise</button>
+  <button class="tab" data-tab="detail">Detailed</button>
+</nav>
+
+<main>
+<section id="concise" class="panel active">
+  <h2>Updated priority shortlist</h2>
+  <div class="wrap">
+    <table>
+      <thead><tr><th class="chk">✓</th><th>University</th><th>CSE / Computational</th><th>Astrophysics</th></tr></thead>
+      <tbody id="concise-body"></tbody>
+    </table>
+  </div>
+</section>
+
+<section id="detail" class="panel">
+  <div class="filters">
+    <button class="f active" data-f="all">All</button>
+    <button class="f" data-f="CSE / Computational">CSE / Computational</button>
+    <button class="f" data-f="Astrophysics">Astrophysics</button>
+    <input id="search" type="search" placeholder="Search university…">
+  </div>
+  <div id="cards"></div>
+  <p class="note">Deadlines are the latest published/recurring dates. Recheck official pages before applying. Planning assumption: BSc Physics final certificate expected July 2027.</p>
+</section>
+</main>
+<script src="data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
